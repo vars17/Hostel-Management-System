@@ -13,43 +13,65 @@
   padding: 20px;
   text-align: center;
 }
+
+
+body{
+  background-image: url("D:\GIRLATHON\txi.jpg");
+  background-size: 450px 450px;
+  background-repeat: no-repeat;
+  background-position: 20cm 10cm;
+
+}
+
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+label {
+  text-align: right;
+}
+
 </style>
+
 <body>
 	<div class="header">
-	  <h1>Ladies Hostel</h1>
+	  <h1 >Ladies Hostel</h1>
 	  <h2 >Mar Athanasius College Of Engineering Kothamangalam</h2>
 	</div>
-</body>
-
-<head>
-	<title>Attendance Register</title>
-</head>
-<body>
-	<h1>Attendance Register</h1>
-	<form>
-		
-	<label for="date">Date:</label>
-	<input type="date" id="date" name="date"><br><br>
-	<label for="time">Time:</label>
-	<input type="time" id="time" name="time"><br><br>
-	<label for="attendance">Attendance:</label>
-	<select id="attendance" name="attendance">
-		<option value="present">Present</option>
-		<option value="absent">Absent</option>
-	</select><br><br>
-	<label for="homegoing">Home Going:</label>
-	<select id="homegoing" name="homegoing">
-		<option value="yes">Yes</option>
-		<option value="no">No</option>
-	</select><br><br>
-<label for="place">Place:</label>
-	<input type="text" id="place" name="place"><br><br>
-	<label for="from-date">From Date:</label>
-	<input type="date" id="from-date" name="from-date"><br><br>
-	<label for="to-date">To Date:</label>
-	<input type="date" id="to-date" name="to-date"><br><br>
-
-	<input type="submit" value="Submit">
-</form>
-</body>
+  <title> Home Going</title>
+	   
+    
+  <label for="homegoing" style="font-size:xx-large; color: rgb(47, 55, 33) ;font-family:'Times New Roman', Times, serif; ">HOME GOING:</label>
+  <select id="homegoing" name="homegoing" onchange="showDates()">
+    <option value="">Select an option</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+  </select><br><br>
+  
+  <div id="dates" style="display:none;">
+      <label for="from-date" style="font-size:xx-large; text-align: right;">From Date:</label>
+      <input type="date" id="from-date" name="from-date"><br><br>
+      <label for="to-date" style="font-size:xx-large; text-align: right;">To Date:</label>
+      <input type="date" id="to-date" name="to-date"><br><br>
+  </div>
+  
+  <script>
+  function showDates() {
+      var homegoing = document.getElementById("homegoing").value;
+      var datesDiv = document.getElementById("dates");
+      if (homegoing === "yes") {
+          datesDiv.style.display = "block";
+      } else {
+          datesDiv.style.display = "none";
+      }
+  }
+  </script>
+  </body>
 </html>
