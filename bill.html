@@ -34,7 +34,7 @@
 				<th>Hostel Block</th>
 				<th>Month</th>
 				<th>Amount</th>
-				<th>Date of Payment</th>
+
 				<th>Payment Status</th>
 			</tr>
 		</thead>
@@ -44,7 +44,6 @@
 				<td>A</td>
 				<td>January</td>
 				<td>1000</td>
-				<td><input type="date" id="date1"></td>
 				<td>
 					<select id="status1">
 						<option value="paid">Paid</option>
@@ -57,7 +56,6 @@
 				<td>B</td>
 				<td>February</td>
 				<td>1500</td>
-				<td><input type="date" id="date2"></td>
 				<td>
 					<select id="status2">
 						<option value="paid">Paid</option>
@@ -70,7 +68,6 @@
 				<td>C</td>
 				<td>March</td>
 				<td>1200</td>
-				<td><input type="date" id="date3"></td>
 				<td>
 					<select id="status3">
 						<option value="paid">Paid</option>
@@ -80,17 +77,5 @@
 			</tr>
 		</tbody>
 	</table>
-	<button onclick="updateStatus()">Update Payment Status</button>
-<script>
-	function updateStatus() {
-		var status1 = document.getElementById("status1").value;
-		var status2 = document.getElementById("status2").value;
-		var status3 = document.getElementById("status3").value;
-
-		document.getElementById("status1").value = status1;
-		document.getElementById("status2").value = status2;
-		document.getElementById("status3").value = status3;
-	}
-</script>
-</body>
+	</body>
 </html>
