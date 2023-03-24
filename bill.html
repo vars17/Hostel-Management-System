@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fee Payment</title>
+</head>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the header */
+.header {
+  background-color: MediumSeaGreen;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+<body>
+	<div class="header">
+	  <h1>Ladies Hostel</h1>
+	  <h2 >Mar Athanasius College Of Engineering Kothamangalam</h2>
+	</div>
+</body>
+</html>
+<body>
+	<h1>Fee Payment</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Receipt No</th>
+				<th>Hostel Block</th>
+				<th>Month</th>
+				<th>Amount</th>
+				<th>Date of Payment</th>
+				<th>Payment Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>A</td>
+				<td>January</td>
+				<td>1000</td>
+				<td><input type="date" id="date1"></td>
+				<td>
+					<select id="status1">
+						<option value="paid">Paid</option>
+						<option value="unpaid">Unpaid</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>B</td>
+				<td>February</td>
+				<td>1500</td>
+				<td><input type="date" id="date2"></td>
+				<td>
+					<select id="status2">
+						<option value="paid">Paid</option>
+						<option value="unpaid">Unpaid</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>C</td>
+				<td>March</td>
+				<td>1200</td>
+				<td><input type="date" id="date3"></td>
+				<td>
+					<select id="status3">
+						<option value="paid">Paid</option>
+						<option value="unpaid">Unpaid</option>
+					</select>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<button onclick="updateStatus()">Update Payment Status</button>
+<script>
+	function updateStatus() {
+		var status1 = document.getElementById("status1").value;
+		var status2 = document.getElementById("status2").value;
+		var status3 = document.getElementById("status3").value;
+
+		document.getElementById("status1").value = status1;
+		document.getElementById("status2").value = status2;
+		document.getElementById("status3").value = status3;
+	}
+</script>
+</body>
+</html>
